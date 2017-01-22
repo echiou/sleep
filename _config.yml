@@ -13,3 +13,6 @@ collections:
   guides:
     output: true
     permalink: /guides/:path/
+  references:
+    output: true
+    permalink: /references/:path/
