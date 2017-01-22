@@ -1,7 +1,7 @@
 # Site settings
 title: Coffeechiou
 description: Ethan's coffee guides.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/coffee" # the subpath of your site, e.g. /blog/
 url: "echiou.com" # the base hostname & protocol for your site
 
 # Build settings
