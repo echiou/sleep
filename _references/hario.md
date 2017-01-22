@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hario Mini Mill Reference
+title: Hario Mini Mill
 ---
 
 *TODO: When there are more reference pages, change header link to dropdown menu*

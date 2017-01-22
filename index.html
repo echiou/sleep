@@ -1,3 +1,16 @@
 ---
 layout: page
 ---
+<div class="guides">
+  <h2>Brew Guides</h2>
+  {% for guide in site.guides %}
+    <p><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></p>
+  {% endfor %}
+</div>
+
+<div class="references">
+  <h2>References</h2>
+  {% for reference in site.references %}
+    <p><a href="{{site.baseurl}}{{reference.url}}">{{reference.title}}</a></p>
+  {% endfor %}
+</div>

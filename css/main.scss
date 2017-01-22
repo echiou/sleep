@@ -43,8 +43,8 @@ Custom CSS
 */
 
 header {
-  margin-top:  2rem;
-  margin-bottom: 2rem;
+  padding-top:  2rem;
+  padding-bottom: 2rem;
 }
 
 .header-title {
@@ -75,12 +75,26 @@ header {
 }
 
 /*
+* Body
+*/
+
+/* 
+* Posts
+*/
+.guides {
+  margin-bottom: 2.5rem;
+}
+
+.references {
+  margin-bottom: 2.5rem;
+}
+
+/*
 * Footer
 */
 footer {
   font-size: 1.2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .footer-text {
