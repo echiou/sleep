@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'ReginaBlackHilite';
+    src: url('../fonts/reginablack-hilite-webfont.woff2') format('woff2'),
+         url('../fonts/reginablack-hilite-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ReginaBlackSolid';
+    src: url('../fonts/reginablack-solid-webfont.woff2') format('woff2'),
+         url('../fonts/reginablack-solid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DidacticRegular';
+    src: url('../fonts/didactic-regular-webfont.woff2') format('woff2'),
+         url('../fonts/didactic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
