@@ -1,7 +1,7 @@
 # Site settings
-title: Coffeechiou
-description: Ethan's coffee guides.
-baseurl: "/coffee" # the subpath of your site, e.g. /blog/
+title: Sleep
+description: Psych 133 Stuffs
+baseurl: "/sleep" # the subpath of your site, e.g. /blog/
 url: "echiou.com" # the base hostname & protocol for your site
 
 # Build settings
@@ -9,10 +9,10 @@ markdown: kramdown
 permalink: pretty
 
 # collections
-collections:
-  guides:
-    output: true
-    permalink: /guides/:path/
-  references:
-    output: true
-    permalink: /references/:path/
+# collections:
+  # guides:
+  #   output: true
+  #   permalink: /guides/:path/
+  # references:
+  #   output: true
+  #   permalink: /references/:path/

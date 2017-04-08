@@ -9,19 +9,19 @@ $bp-larger-than-desktop   : "min-width: 1000px" !default;
 $bp-larger-than-desktophd : "min-width: 1200px" !default;
 
 // Colors
-$light-grey: #f7f4f0 !default;
+$light-grey: #f9f9f9 !default;
 $dark-grey: #333 !default;
-$primary-color: #6c3a20 !default;
+$primary-color: #000060 !default;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
 $link-color: lighten($primary-color, 13.5%) !default;
-$font-color: #44403b !default;
+$font-color: $dark-grey !default;
 
 // Typography
-@import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i|Lora:400,400i,700,700i');
 
-$header-font-family: 'Unica One', Helvetica, sans-serif !default;
-$font-family: 'Vollkorn', serif !default;
+$header-font-family: 'Lato', serif !default;
+$font-family: 'Lora', serif !default;
 
 //Grid Variables
 $container-width: 960px !default;
