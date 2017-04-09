@@ -14,3 +14,31 @@ layout: page
     <p><a href="{{site.baseurl}}{{reference.url}}">{{reference.title}}</a></p>
   {% endfor %}
 </div> -->
+
+<body ng-app="cyo" class='container'>
+  <h2>Hi Tim, look how easy Javascript is!</h2>
+
+  <story>
+    <page intro>
+        <p>You lay in bed, doing CS186 and contemplating life.</p>
+        <p>"You'll never finish this project, Tim" says Yiming, the grumpy dwarf.</p>
+        <p>"I'll show that grumpy dwarf"</p>
+        <button choice work-on-project>Work on project</button>
+        <button choice procrastinate>Procrastinate</button>
+    </page>
+    <page work-on-project>
+        <p>You smash your head into the keyboard for a couple hours, but nothing gets done</p>
+        <button choice fail>Crap</button>
+    </page>
+    <page procrastinate>
+        <p>You hang out a bit, playing a game of League</p>
+        <p>"Crap, it's midnight already".</p>
+        <button choice fail>Darn it</button>
+    </page>
+    <page fail>
+        <p>You get a 0 on your project.</p>
+        <button restart>Play again?</button>
+    </page>
+  </story>
+
+</body>
