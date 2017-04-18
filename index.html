@@ -1,44 +1,256 @@
 ---
 layout: page
 ---
-<!-- <div class="guides">
-  <h2>Brew Guides</h2>
-  {% for guide in site.guides %}
-    <p><a href="{{site.baseurl}}{{guide.url}}">{{guide.title}}</a></p>
-  {% endfor %}
-</div>
-
-<div class="references">
-  <h2>References</h2>
-  {% for reference in site.references %}
-    <p><a href="{{site.baseurl}}{{reference.url}}">{{reference.title}}</a></p>
-  {% endfor %}
-</div> -->
-
 <body ng-app="cyo" class='container'>
-  <h2>Hi Tim, look how easy Javascript is!</h2>
-
   <story>
+    <!-- Intro -->
     <page intro>
-        <p>You lay in bed, doing CS186 and contemplating life.</p>
-        <p>"You'll never finish this project, Tim" says Yiming, the grumpy dwarf.</p>
-        <p>"I'll show that grumpy dwarf"</p>
-        <button choice work-on-project>Work on project</button>
-        <button choice procrastinate>Procrastinate</button>
+      <button choice pick-up-phone>Reach for my phone</button>
     </page>
-    <page work-on-project>
-        <p>You smash your head into the keyboard for a couple hours, but nothing gets done</p>
-        <button choice fail>Crap</button>
+    <page pick-up-phone>
+      <p>I reach for my phone.</p>
+      <h2>8:46</h2>
+      <h6>2 New Messages</h6>
+      <button choice read-message>Read</button><br>
     </page>
-    <page procrastinate>
-        <p>You hang out a bit, playing a game of League</p>
-        <p>"Crap, it's midnight already".</p>
-        <button choice fail>Darn it</button>
+    <page read-message>
+      <p>
+        <b>Tiffany</b><br>
+        Hey what are you up to?
+      </p>
+      <p>I think for a moment, Trying to remember who Tiffany was.</p>
+      <p>Oh right, the pretty girl that I exchanged numbers with on the first day of Econ 133.</p>
+      <button choice keep-reading>Keep Reading</button><br>
     </page>
-    <page fail>
-        <p>You get a 0 on your project.</p>
-        <button restart>Play again?</button>
+    <page keep-reading>
+      <p>
+        <b>Tiffany</b><br>
+        Im studying at the music library for 133 rn, lmk if you wanna join
+      </p>
+      <p>Oh right... There's a test tomorrow. I think I'm mostly caught up though.</p>
+      <button choice study-with-tiffany>Sure...</button><br>
+      <button choice study-self>I study better by myself</button>
+    </page>
+
+    <!-- Studying with Tiffany -->
+    <page study-with-tiffany>
+      <p>
+        <b>Me</b><br>
+        Sure! Be right there
+      </p>
+      <p>
+        <b>Tiffany</b><br>
+        Cya
+      </p>
+      <p>I walk over to the library and look around.</p>
+      <p>Tiffany waves, and I sit down next to her.</p>
+      <p>We talk for a bit. She's pretty cool.</p>
+      <p>She seems a bit confused by the material though, which explains the text.</p>
+      <button choice keep-studying>Help her out</button><br>
+    </page>
+    <page keep-studying>
+      <p>I review the material with her for a couple hours, until around 11:30.</p>
+      <p>I feel a bit tired, and start to pack up to go.</p>
+      <p>Tiffany asks if I can stay and help her out more.</p>
+      <event helped-tiffany></event>
+      <button choice help-tiffany>Stay and help</button><br>
+      <button choice head-back>Head back and sleep</button>
+    </page>
+    <page help-tiffany>
+      <p>I unpack my stuff, and we stay up until 3 a.m. going over all the material.</p>
+      <event stayed-up-late></event>
+      <button choice head-back>Now I'm really tired</button><br>
+    </page>
+    <page head-back>
+      <p>After a long walk back home, I plop down on the bed and catch some sleep for tomorrow's test.</p>
+      <button choice next-day>Zzz...</button><br>
+    </page>
+
+    <!-- Staying at home -->
+    <page study-self>
+      <p>
+        <b>Me</b><br>
+        Sorry, probably going to study at home myself.
+      </p>
+      <p>I look over my notes from the past few weeks and take a practice test. 43/50.</p>
+      <p>My phone rings again.</p>
+      <h2>10:42</h2>
+      <h6>1 New Message</h6>
+      <button choice read-george-message>Read</button><br>
+    </page>
+    <page read-george-message>
+      <p>
+        <b>George</b><br>
+        Hey, coming home soon. Want to play some Mario Kart?
+      </p>
+      <button choice study-all-night>Nah, studying all night</button><br>
+      <button choice play-mario-kart>Sure, but only for a bit</button>
+    </page>
+    <page study-all-night>
+      <p>George comes in, and I tell him to keep it down if he's playing games.</p>
+      <p>I take a couple more practice tests, and go over discussion notes. Before I know it, it's 1:30 a.m. and I head to bed.</p>
+      <event stayed-up-late></event>
+      <button choice next-day>Zzz...</button><br>
+    </page>
+    <page play-mario-kart>
+      <p>George comes in, and I turn on the TV.</p>
+      <p>He walks to the kitchen, opens a beer, and offers it to me.</p>
+      <button choice drink-beer>I could use a drink after studying</button><br>
+      <button choice reject-beer>Let's just play</button>
+    </page>
+    <page drink-beer>
+      <p>I sip on the beer as we play Mario Kart.</p>
+      <p>It's almost midnight now.</p>
+      <event drank></event>
+      <button choice play-more>We should play some Smash Bros.</button><br>
+      <button choice go-to-sleep>It's time to sleep</button>
+    </page>
+    <page reject-beer>
+      <p>We play a few games of Mario Kart.</p>
+      <p>The next time I check the clock, it's 11:40.</p>
+      <button choice play-more>Hey George, want to play some Splatoon?</button><br>
+      <button choice go-to-sleep>I should go to bed</button>
+    </page>
+    <page play-more>
+      <p>I stay up until 2, playing games with George.</p>
+      <condition drank>
+        <p>
+          I go to bed a bit tipsy.
+        </p>
+      </condition>
+      <event stayed-up-late></event>
+      <button choice next-day>Zzz...</button><br>
+    </page>
+    <page go-to-sleep>
+      <p>Tired from the day, I head to bed.</p>
+      <condition drank>
+        <p>
+          I'm a little buzzed from the beer, but I can just sleep that off.
+        </p>
+      </condition>
+      <button choice next-day>Zzz...</button><br>
+    </page>
+
+    <!-- Next Day -->
+    <page next-day>
+      <condition stayed-up-late>
+        <p>My blaring alarm wakes me up. 9:15. I must have hitten snooze.</p>
+        <p>I quickly throw my clothes on, grab a granola bar, and head to my 10 a.m. midterm.</p>
+      </condition>
+      <condition not stayed-up-late>
+        <h2>8:56</h2>
+        <p>Wow, I woke up before my alarm.</p>
+        <p>After making some eggs, I leave the dishes in the sink for later. Time for my 10 a.m. midterm.</p>
+      </condition>
+      <button choice take-test>"You may now begin"</button><br>
+    </page>
+    <page take-test>
+      <condition stayed-up-late>
+        <p>
+          <b>Q1:</b><br>
+          Something about France's economy... I can't quite put my finger on it.
+        </p>
+      </condition>
+      <condition not stayed-up-late>
+        <condition drank>
+          <p>
+            <b>Q1:</b><br>
+            Something about France's economy... I can't quite put my finger on it.
+          </p>
+        </condition>
+        <condition not drank>
+          <p>
+            <b>Q1:</b><br>
+            A question about France's key economic sectors, chemical & tourism. I know this!
+          </p>
+        </condition>
+      </condition>
+      <button choice continue-taking-test>True</button>
+      <button choice continue-taking-test>False</button><br>
+    </page>
+    <page continue-taking-test>
+      <condition stayed-up-late>
+        <p>
+          <b>Q2:</b><br>
+          Another confusing multiple choice question about economies of scale...
+        </p>
+      </condition>
+      <condition not stayed-up-late>
+        <condition drank>
+          <p>
+            <b>Q2:</b><br>
+            Another confusing multiple choice question about economies of scale...
+          </p>
+        </condition>
+        <condition not drank>
+          <p>
+            <b>Q2:</b><br>
+            Cool, a question about economies of scale.
+          </p>
+        </condition>
+      </condition>
+      <button choice finish-taking-test>A</button>
+      <button choice finish-taking-test>B</button>
+      <button choice finish-taking-test>C</button>
+      <button choice finish-taking-test>D</button><br>
+    </page>
+    <page finish-taking-test>
+      <p>After 2 hours, I finally turn in the test and walk out of the hall</p>
+      <condition helped-tiffany>
+        <p>
+          <button choice talk-with-tiffany>"Hey, wait up!"</button><br>
+        </p>
+      </condition>
+      <condition not helped-tiffany>
+        <p>
+          <button choice talk-with-tiffany>I see Tiffany, and tap her on the shoulder</button><br>
+        </p>
+      </condition>
+    </page>
+    <page talk-with-tiffany>
+      <condition helped-tiffany>
+        <condition stayed-up-late>
+          <p>"Hey, thanks for helping me out yesterday!"</p>
+          <p>She pauses, looking at your eyes.</p>
+          <p>"You look a bit tired. Go get some sleep."</p>
+          <button choice conclusion>That sounds pretty good</button><br>
+        </condition>
+        <condition not stayed-up-late>
+          <p>"Hey, thanks for helping me out yesterday!"</p>
+          <p>She pauses, looking into your eyes.</p>
+          <p>"We should grab coffee some time."</p>
+          <button choice conclusion>Okay!</button><br>
+        </condition>
+      </condition>
+      <condition not helped-tiffany>
+        <p>Tiffany turns around and says hi.</p>
+        <p>I apologize for not making it to the library last night. She smiles and says it's okay.</p>
+        <button choice conclusion>Say bye</button><br>
+      </condition>
+    </page>
+    <page conclusion>
+      <condition helped-tiffany>
+        <condition not stayed-up-late>
+          <p>Since then, I've been on three dates with Tiffany. It's going pretty well between us, if I do say so myself.</p>
+        </condition>
+      </condition>
+      <condition stayed-up-late>
+        <p><b>Midterm 1:</b> 34/50</p>
+        <p>Hmm... didn't do so well on that test.</p>
+      </condition>
+      <condition not stayed-up-late>
+        <condition drank>
+          <p><b>Midterm 1:</b> 34/50</p>
+          <p>Hmm... didn't do so well on that test.</p>
+        </condition>
+        <condition not drank>
+          <p><b>Midterm 1:</b> 46/50</p>
+          <p>Nice!</p>
+        </condition>
+      </condition>
+      <button restart>Play again?</button>
     </page>
   </story>
+
 
 </body>

@@ -1,6 +1,6 @@
 # Site settings
-title: Sleep
-description: Psych 133 Stuffs
+title: reverie
+description: A game about a necessary daily ritual.
 baseurl: "/sleep" # the subpath of your site, e.g. /blog/
 url: "echiou.com" # the base hostname & protocol for your site
 
