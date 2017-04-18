@@ -11,7 +11,8 @@ layout: page
       <p>I reach for my phone.</p>
       <h2>8:46</h2>
       <h6>2 New Messages</h6>
-      <button choice read-message>Read</button><br>
+      <button choice read-message>Read</button>
+      <br>
     </page>
     <page read-message>
       <p>
@@ -20,7 +21,8 @@ layout: page
       </p>
       <p>I think for a moment, Trying to remember who Tiffany was.</p>
       <p>Oh right, the pretty girl that I exchanged numbers with on the first day of Econ 133.</p>
-      <button choice keep-reading>Keep Reading</button><br>
+      <button choice keep-reading>Keep Reading</button>
+      <br>
     </page>
     <page keep-reading>
       <p>
@@ -28,8 +30,9 @@ layout: page
         Im studying at the music library for 133 rn, lmk if you wanna join
       </p>
       <p>Oh right... There's a test tomorrow. I think I'm mostly caught up though.</p>
-      <button choice study-with-tiffany>Sure...</button><br>
+      <button choice study-with-tiffany>Sure...</button>
       <button choice study-self>I study better by myself</button>
+      <br>
     </page>
 
     <!-- Studying with Tiffany -->
@@ -46,24 +49,28 @@ layout: page
       <p>Tiffany waves, and I sit down next to her.</p>
       <p>We talk for a bit. She's pretty cool.</p>
       <p>She seems a bit confused by the material though, which explains the text.</p>
-      <button choice keep-studying>Help her out</button><br>
+      <button choice keep-studying>Help her out</button>
+      <br>
     </page>
     <page keep-studying>
       <p>I review the material with her for a couple hours, until around 11:30.</p>
       <p>I feel a bit tired, and start to pack up to go.</p>
       <p>Tiffany asks if I can stay and help her out more.</p>
       <event helped-tiffany></event>
-      <button choice help-tiffany>Stay and help</button><br>
+      <button choice help-tiffany>Stay and help</button>
       <button choice head-back>Head back and sleep</button>
+      <br>
     </page>
     <page help-tiffany>
       <p>I unpack my stuff, and we stay up until 3 a.m. going over all the material.</p>
       <event stayed-up-late></event>
-      <button choice head-back>Now I'm really tired</button><br>
+      <button choice head-back>Now I'm really tired</button>
+      <br>
     </page>
     <page head-back>
       <p>After a long walk back home, I plop down on the bed and catch some sleep for tomorrow's test.</p>
-      <button choice next-day>Zzz...</button><br>
+      <button choice next-day>Zzz...</button>
+      <br>
     </page>
 
     <!-- Staying at home -->
@@ -76,45 +83,52 @@ layout: page
       <p>My phone rings again.</p>
       <h2>10:42</h2>
       <h6>1 New Message</h6>
-      <button choice read-george-message>Read</button><br>
+      <button choice read-george-message>Read</button>
+      <br>
     </page>
     <page read-george-message>
       <p>
         <b>George</b><br>
         Hey, coming home soon. Want to play some Mario Kart?
       </p>
-      <button choice study-all-night>Nah, studying all night</button><br>
+      <button choice study-all-night>Nah, studying all night</button>
       <button choice play-mario-kart>Sure, but only for a bit</button>
+      <br>
     </page>
     <page study-all-night>
       <p>George comes in, and I tell him to keep it down if he's playing games.</p>
       <p>I take a couple more practice tests, and go over discussion notes. Before I know it, it's 1:30 a.m. and I head to bed.</p>
       <event stayed-up-late></event>
-      <button choice next-day>Zzz...</button><br>
+      <button choice next-day>Zzz...</button>
+      <br>
     </page>
     <page play-mario-kart>
       <p>George comes in, and I turn on the TV.</p>
       <p>He walks to the kitchen, opens a beer, and offers it to me.</p>
-      <button choice drink-beer>I could use a drink after studying</button><br>
+      <button choice drink-beer>I could use a drink after studying</button>
       <button choice reject-beer>Let's just play</button>
+      <br>
     </page>
     <page drink-beer>
       <p>I sip on the beer as we play Mario Kart.</p>
       <p>It's almost midnight now.</p>
       <event drank></event>
-      <button choice play-more>We should play some Smash Bros.</button><br>
+      <button choice play-more>We should play some Smash Bros.</button>
       <button choice go-to-sleep>It's time to sleep</button>
+      <br>
     </page>
     <page reject-beer>
       <p>We play a few games of Mario Kart.</p>
       <p>The next time I check the clock, it's 11:40.</p>
-      <button choice play-more>Hey George, want to play some Splatoon?</button><br>
+      <button choice play-more>Hey George, want to play some Splatoon?</button>
       <button choice go-to-sleep>I should go to bed</button>
+      <br>
     </page>
     <page play-more>
       <p>I stay up until 2, playing games with George.</p>
       <event stayed-up-late></event>
-      <button choice next-day>Zzz...</button><br>
+      <button choice next-day>Zzz...</button>
+      <br>
     </page>
     <page go-to-sleep>
       <p>Tired from the day, I head to bed.</p>
@@ -123,7 +137,8 @@ layout: page
           I'm a little buzzed from the beer, but I can just sleep that off.
         </p>
       </condition>
-      <button choice next-day>Zzz...</button><br>
+      <button choice next-day>Zzz...</button>
+      <br>
     </page>
 
     <!-- Next Day -->
@@ -137,7 +152,8 @@ layout: page
         <p>Wow, I woke up before my alarm.</p>
         <p>After making some eggs, I leave the dishes in the sink for later. Time for my 10 a.m. midterm.</p>
       </condition>
-      <button choice take-test>"You may now begin"</button><br>
+      <button choice take-test>"You may now begin"</button>
+      <br>
     </page>
     <page take-test>
       <condition stayed-up-late>
@@ -161,7 +177,8 @@ layout: page
         </condition>
       </condition>
       <button choice continue-taking-test>True</button>
-      <button choice continue-taking-test>False</button><br>
+      <button choice continue-taking-test>False</button>
+      <br>
     </page>
     <page continue-taking-test>
       <condition stayed-up-late>
@@ -187,18 +204,21 @@ layout: page
       <button choice finish-taking-test>A</button>
       <button choice finish-taking-test>B</button>
       <button choice finish-taking-test>C</button>
-      <button choice finish-taking-test>D</button><br>
+      <button choice finish-taking-test>D</button>
+      <br>
     </page>
     <page finish-taking-test>
       <p>After 2 hours, I finally turn in the test and walk out of the hall</p>
       <condition helped-tiffany>
         <p>
-          <button choice talk-with-tiffany>"Hey, wait up!"</button><br>
+          <button choice talk-with-tiffany>"Hey, wait up!"</button>
+          <br>
         </p>
       </condition>
       <condition not helped-tiffany>
         <p>
-          <button choice talk-with-tiffany>I see Tiffany, and tap her on the shoulder</button><br>
+          <button choice talk-with-tiffany>I see Tiffany, and tap her on the shoulder</button>
+          <br>
         </p>
       </condition>
     </page>
@@ -208,19 +228,22 @@ layout: page
           <p>"Hey, thanks for helping me out yesterday!"</p>
           <p>She pauses, looking at your eyes.</p>
           <p>"You look a bit tired. Go get some sleep."</p>
-          <button choice conclusion>That sounds pretty good</button><br>
+          <button choice conclusion>That sounds pretty good</button>
+          <br>
         </condition>
         <condition not stayed-up-late>
           <p>"Hey, thanks for helping me out yesterday!"</p>
           <p>She pauses, looking into your eyes.</p>
           <p>"We should grab coffee some time."</p>
-          <button choice conclusion>Okay!</button><br>
+          <button choice conclusion>Okay!</button>
+          <br>
         </condition>
       </condition>
       <condition not helped-tiffany>
         <p>Tiffany turns around and says hi.</p>
         <p>I apologize for not making it to the library last night. She smiles and says it's okay.</p>
-        <button choice conclusion>Say bye</button><br>
+        <button choice conclusion>Say bye</button>
+        <br>
       </condition>
     </page>
     <page conclusion>
@@ -244,6 +267,7 @@ layout: page
         </condition>
       </condition>
       <button restart>Play again?</button>
+      <br>
     </page>
   </story>
 
