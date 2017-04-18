@@ -267,6 +267,28 @@ layout: page
         </condition>
       </condition>
       <button restart>Play again?</button>
+
+      <p><b>Recommended Reading:</b></p>
+      <condition stayed-up-late>
+        <p></p>
+        <p><a href="http://www.jstor.org/stable/1414040">Obliviscence during Sleep and Waking</a></p>
+      </condition>
+      <condition drank>
+        <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/12683478">Ingestion of ethanol just prior to sleep onset impairs memory for procedural but not declarative tasks</a></p>
+      </condition>
+      <condition helped-tiffany>
+        <condition stayed-up-late>
+          <p><a href="http://www.bmj.com/content/341/bmj.c6614">Beauty sleep: experimental study on the perceived health and attractiveness of sleep deprived people</a></p>
+          <p></p>
+        </condition>
+      </condition>
+      <condition not drank>
+        <condition not stayed-up-late>
+          <p>None! You did the right things to prepare for your midterm.</p>
+        </condition>
+      </condition>
+
+      <button onclick="location.href='{{site.baseurl}}/about'" type="button">About this game</button>
       <br>
     </page>
   </story>
